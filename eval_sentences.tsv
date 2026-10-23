@@ -1,0 +1,41 @@
+id	category	text	roman
+a01	hi+1en	मैं कल सुबह office जल्दी पहुँच जाऊँगा.	Main kal subah office jaldi pahunch jaunga.
+a02	hi+1en	आज बाहर बहुत traffic है, थोड़ा देर से आना.	Aaj bahar bahut traffic hai, thoda der se aana.
+a03	hi+1en	माँ ने मेरे लिए नया phone खरीदा है.	Maa ne mere liye naya phone kharida hai.
+a04	hi+1en	इस बार exam की तैयारी अच्छे से करनी होगी.	Is baar exam ki taiyari achhe se karni hogi.
+a05	hi+1en	उसने मुझे रात को message किया था.	Usne mujhe raat ko message kiya tha.
+a06	hi+1en	हमारी train दो घंटे late चल रही है.	Hamari train do ghante late chal rahi hai.
+a07	hi+1en	क्या तुम मुझे अपना laptop दे सकते हो?	Kya tum mujhe apna laptop de sakte ho?
+a08	hi+1en	दादी को हर शाम news देखना पसंद है.	Dadi ko har shaam news dekhna pasand hai.
+a09	hi+1en	यह restaurant अपने खाने के लिए मशहूर है.	Yeh restaurant apne khane ke liye mashhoor hai.
+a10	hi+1en	बच्चों का school अगले हफ्ते से खुलेगा.	Bachchon ka school agle hafte se khulega.
+b01	hi+multi_en	आज की meeting में हम new project का budget discuss करेंगे.	Aaj ki meeting mein hum new project ka budget discuss karenge.
+b02	hi+multi_en	Please अपना password किसी के साथ share मत करना.	Please apna password kisi ke saath share mat karna.
+b03	hi+multi_en	मेरा internet connection बार बार disconnect हो रहा है.	Mera internet connection baar baar disconnect ho raha hai.
+b04	hi+multi_en	Weekend पर हम friends के साथ movie देखने जाएँगे.	Weekend par hum friends ke saath movie dekhne jayenge.
+b05	hi+multi_en	Doctor ने कहा है कि रोज़ morning walk करना ज़रूरी है.	Doctor ne kaha hai ki roz morning walk karna zaroori hai.
+b06	hi+multi_en	इस app में online payment का option बहुत easy है.	Is app mein online payment ka option bahut easy hai.
+b07	hi+multi_en	Customer care वालों ने मेरी complaint अभी तक solve नहीं की.	Customer care walon ne meri complaint abhi tak solve nahi ki.
+b08	hi+multi_en	Delivery boy ने parcel गलत address पर छोड़ दिया.	Delivery boy ne parcel galat address par chhod diya.
+b09	hi+multi_en	अगर battery low है तो charger लगा दो.	Agar battery low hai to charger laga do.
+b10	hi+multi_en	हमारी team ने final match बड़ी आसानी से जीत लिया.	Hamari team ne final match badi aasani se jeet liya.
+b11	hi+multi_en	मैं Monday तक report submit कर दूँगा, don't worry.	Main Monday tak report submit kar dunga, don't worry.
+b12	hi+multi_en	College के canteen में samosa सबसे popular है.	College ke canteen mein samosa sabse popular hai.
+c01	en_matrix	I think यह plan काफ़ी अच्छा है, let's start करते हैं.	I think yeh plan kaafi achha hai, let's start karte hain.
+c02	en_matrix	Honestly, मुझे नहीं पता था कि it was so expensive.	Honestly, mujhe nahi pata tha ki it was so expensive.
+c03	en_matrix	Can you please मेरी थोड़ी help कर दो?	Can you please meri thodi help kar do?
+c04	en_matrix	The flight is delayed, तो हम airport पर ही wait करेंगे.	The flight is delayed, to hum airport par hi wait karenge.
+c05	en_matrix	Just relax यार, everything will be fine.	Just relax yaar, everything will be fine.
+c06	en_matrix	My manager said कि deadline extend नहीं होगी.	My manager said ki deadline extend nahi hogi.
+d01	hindi	आज मौसम बहुत सुहाना है और ठंडी हवा चल रही है.	Aaj mausam bahut suhana hai aur thandi hawa chal rahi hai.
+d02	hindi	गंगा नदी के किनारे शाम की आरती देखने लायक होती है.	Ganga nadi ke kinare shaam ki aarti dekhne layak hoti hai.
+d03	hindi	किसान अपनी फसल के लिए बारिश का इंतज़ार कर रहे हैं.	Kisan apni fasal ke liye baarish ka intezaar kar rahe hain.
+d04	hindi	मुझे पुरानी हिंदी फिल्मों के गाने बहुत पसंद हैं.	Mujhe purani Hindi filmon ke gaane bahut pasand hain.
+d05	hindi	हम सबको अपने देश की संस्कृति पर गर्व है.	Hum sabko apne desh ki sanskriti par garv hai.
+e01	english	The train to Bangalore leaves from platform number three.	The train to Bangalore leaves from platform number three.
+e02	english	Please keep your ticket ready for checking.	Please keep your ticket ready for checking.
+e03	english	I will call you back after the class gets over.	I will call you back after the class gets over.
+e04	english	The weather in Delhi is very hot during May and June.	The weather in Delhi is very hot during May and June.
+e05	english	We are planning a trip to Goa with our college friends.	We are planning a trip to Goa with our college friends.
+f01	brands	मैंने WhatsApp पर group में photo send कर दी है.	Maine WhatsApp par group mein photo send kar di hai.
+f02	brands	YouTube पर उसका new video दस लाख views पार कर गया.	YouTube par uska new video das lakh views paar kar gaya.

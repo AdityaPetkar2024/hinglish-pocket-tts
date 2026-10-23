@@ -1,0 +1,1147 @@
+{
+  "settings": {
+    "cfg": 2.0,
+    "temp": 0.3,
+    "eos_threshold": -1.0,
+    "asr": "openai/whisper-large-v3",
+    "sentences": 40,
+    "voices": [
+      "indictts_hi:female",
+      "indictts_hi:s_male",
+      "ivr_hi:364540",
+      "ivr_hi:396470",
+      "ivr_hi:305329",
+      "ivr_hi:300494",
+      "svarah_en:143cf9",
+      "svarah_en:059cba"
+    ],
+    "sentences_found_in_training_text": []
+  },
+  "systems": {
+    "extended_5k": {
+      "step": 5000,
+      "overall": {
+        "clips": 320,
+        "romanized_cer": 0.115,
+        "romanized_cer_ci95": [
+          0.0891,
+          0.1438
+        ],
+        "ta_wer": 0.1054,
+        "ta_wer_ci95": [
+          0.0782,
+          0.1335
+        ],
+        "speaker_sim": 0.9246,
+        "utmos": 3.59,
+        "silent": 0,
+        "no_eos": 0,
+        "english_word_recall": 0.9379,
+        "english_word_recall_ci95": [
+          0.9013,
+          0.9685
+        ]
+      },
+      "by_category": {
+        "brands": {
+          "clips": 16,
+          "romanized_cer": 0.1675,
+          "romanized_cer_ci95": [
+            0.0588,
+            0.2682
+          ],
+          "ta_wer": 0.1905,
+          "ta_wer_ci95": [
+            0.025,
+            0.3409
+          ],
+          "speaker_sim": 0.9171,
+          "utmos": 3.531,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9844,
+          "english_word_recall_ci95": [
+            0.9688,
+            1.0
+          ]
+        },
+        "en_matrix": {
+          "clips": 48,
+          "romanized_cer": 0.118,
+          "romanized_cer_ci95": [
+            0.0463,
+            0.1998
+          ],
+          "ta_wer": 0.1362,
+          "ta_wer_ci95": [
+            0.075,
+            0.2075
+          ],
+          "speaker_sim": 0.933,
+          "utmos": 3.585,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8945,
+          "english_word_recall_ci95": [
+            0.85,
+            0.9375
+          ]
+        },
+        "english": {
+          "clips": 40,
+          "romanized_cer": 0.034,
+          "romanized_cer_ci95": [
+            0.0,
+            0.0973
+          ],
+          "ta_wer": 0.0365,
+          "ta_wer_ci95": [
+            0.0,
+            0.1167
+          ],
+          "speaker_sim": 0.9237,
+          "utmos": 3.636,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9635,
+          "english_word_recall_ci95": [
+            0.8833,
+            1.0
+          ]
+        },
+        "hi+1en": {
+          "clips": 80,
+          "romanized_cer": 0.1003,
+          "romanized_cer_ci95": [
+            0.0762,
+            0.1237
+          ],
+          "ta_wer": 0.1044,
+          "ta_wer_ci95": [
+            0.0534,
+            0.1667
+          ],
+          "speaker_sim": 0.9156,
+          "utmos": 3.602,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9659,
+          "english_word_recall_ci95": [
+            0.9375,
+            1.0
+          ]
+        },
+        "hi+multi_en": {
+          "clips": 96,
+          "romanized_cer": 0.1856,
+          "romanized_cer_ci95": [
+            0.1535,
+            0.2134
+          ],
+          "ta_wer": 0.0978,
+          "ta_wer_ci95": [
+            0.0583,
+            0.1352
+          ],
+          "speaker_sim": 0.9301,
+          "utmos": 3.606,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9266,
+          "english_word_recall_ci95": [
+            0.8625,
+            0.9792
+          ]
+        },
+        "hindi": {
+          "clips": 40,
+          "romanized_cer": 0.0264,
+          "romanized_cer_ci95": [
+            0.0106,
+            0.0433
+          ],
+          "ta_wer": 0.1201,
+          "ta_wer_ci95": [
+            0.0833,
+            0.1557
+          ],
+          "speaker_sim": 0.9231,
+          "utmos": 3.51,
+          "silent": 0,
+          "no_eos": 0
+        }
+      },
+      "by_voice_dataset": {
+        "indictts_hi": {
+          "clips": 80,
+          "romanized_cer": 0.1064,
+          "romanized_cer_ci95": [
+            0.0789,
+            0.1357
+          ],
+          "ta_wer": 0.0919,
+          "ta_wer_ci95": [
+            0.0637,
+            0.1227
+          ],
+          "speaker_sim": 0.8913,
+          "utmos": 4.013,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9586,
+          "english_word_recall_ci95": [
+            0.9172,
+            0.9903
+          ]
+        },
+        "ivr_hi": {
+          "clips": 160,
+          "romanized_cer": 0.1211,
+          "romanized_cer_ci95": [
+            0.0931,
+            0.1536
+          ],
+          "ta_wer": 0.1162,
+          "ta_wer_ci95": [
+            0.0878,
+            0.1459
+          ],
+          "speaker_sim": 0.9272,
+          "utmos": 3.385,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9207,
+          "english_word_recall_ci95": [
+            0.875,
+            0.9563
+          ]
+        },
+        "svarah_en": {
+          "clips": 80,
+          "romanized_cer": 0.1115,
+          "romanized_cer_ci95": [
+            0.0834,
+            0.1414
+          ],
+          "ta_wer": 0.0973,
+          "ta_wer_ci95": [
+            0.0652,
+            0.1306
+          ],
+          "speaker_sim": 0.9527,
+          "utmos": 3.576,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9517,
+          "english_word_recall_ci95": [
+            0.9049,
+            0.9917
+          ]
+        }
+      }
+    },
+    "baseline_5k": {
+      "step": 5000,
+      "overall": {
+        "clips": 320,
+        "romanized_cer": 0.1299,
+        "romanized_cer_ci95": [
+          0.1017,
+          0.1589
+        ],
+        "ta_wer": 0.1355,
+        "ta_wer_ci95": [
+          0.1019,
+          0.1697
+        ],
+        "speaker_sim": 0.9262,
+        "utmos": 3.632,
+        "silent": 0,
+        "no_eos": 0,
+        "english_word_recall": 0.8957,
+        "english_word_recall_ci95": [
+          0.8458,
+          0.9395
+        ]
+      },
+      "by_category": {
+        "brands": {
+          "clips": 16,
+          "romanized_cer": 0.1733,
+          "romanized_cer_ci95": [
+            0.0809,
+            0.2591
+          ],
+          "ta_wer": 0.2143,
+          "ta_wer_ci95": [
+            0.0875,
+            0.3295
+          ],
+          "speaker_sim": 0.9217,
+          "utmos": 3.569,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8438,
+          "english_word_recall_ci95": [
+            0.7188,
+            0.9688
+          ]
+        },
+        "en_matrix": {
+          "clips": 48,
+          "romanized_cer": 0.1444,
+          "romanized_cer_ci95": [
+            0.056,
+            0.2453
+          ],
+          "ta_wer": 0.183,
+          "ta_wer_ci95": [
+            0.0671,
+            0.309
+          ],
+          "speaker_sim": 0.9382,
+          "utmos": 3.72,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.832,
+          "english_word_recall_ci95": [
+            0.7008,
+            0.9458
+          ]
+        },
+        "english": {
+          "clips": 40,
+          "romanized_cer": 0.0405,
+          "romanized_cer_ci95": [
+            0.0057,
+            0.0844
+          ],
+          "ta_wer": 0.0547,
+          "ta_wer_ci95": [
+            0.0114,
+            0.1167
+          ],
+          "speaker_sim": 0.9248,
+          "utmos": 3.668,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9505,
+          "english_word_recall_ci95": [
+            0.8861,
+            0.9917
+          ]
+        },
+        "hi+1en": {
+          "clips": 80,
+          "romanized_cer": 0.1104,
+          "romanized_cer_ci95": [
+            0.0854,
+            0.1335
+          ],
+          "ta_wer": 0.1266,
+          "ta_wer_ci95": [
+            0.0594,
+            0.1962
+          ],
+          "speaker_sim": 0.9175,
+          "utmos": 3.624,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9886,
+          "english_word_recall_ci95": [
+            0.9712,
+            1.0
+          ]
+        },
+        "hi+multi_en": {
+          "clips": 96,
+          "romanized_cer": 0.2095,
+          "romanized_cer_ci95": [
+            0.1887,
+            0.2275
+          ],
+          "ta_wer": 0.1467,
+          "ta_wer_ci95": [
+            0.0913,
+            0.1975
+          ],
+          "speaker_sim": 0.9293,
+          "utmos": 3.647,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8696,
+          "english_word_recall_ci95": [
+            0.7959,
+            0.9375
+          ]
+        },
+        "hindi": {
+          "clips": 40,
+          "romanized_cer": 0.0269,
+          "romanized_cer_ci95": [
+            0.0106,
+            0.0498
+          ],
+          "ta_wer": 0.1152,
+          "ta_wer_ci95": [
+            0.0714,
+            0.1651
+          ],
+          "speaker_sim": 0.9249,
+          "utmos": 3.496,
+          "silent": 0,
+          "no_eos": 0
+        }
+      },
+      "by_voice_dataset": {
+        "indictts_hi": {
+          "clips": 80,
+          "romanized_cer": 0.1296,
+          "romanized_cer_ci95": [
+            0.1003,
+            0.1608
+          ],
+          "ta_wer": 0.1176,
+          "ta_wer_ci95": [
+            0.0858,
+            0.1515
+          ],
+          "speaker_sim": 0.8942,
+          "utmos": 4.096,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9103,
+          "english_word_recall_ci95": [
+            0.8554,
+            0.9575
+          ]
+        },
+        "ivr_hi": {
+          "clips": 160,
+          "romanized_cer": 0.1368,
+          "romanized_cer_ci95": [
+            0.107,
+            0.1687
+          ],
+          "ta_wer": 0.1534,
+          "ta_wer_ci95": [
+            0.1171,
+            0.1897
+          ],
+          "speaker_sim": 0.9296,
+          "utmos": 3.414,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8759,
+          "english_word_recall_ci95": [
+            0.8188,
+            0.9255
+          ]
+        },
+        "svarah_en": {
+          "clips": 80,
+          "romanized_cer": 0.1164,
+          "romanized_cer_ci95": [
+            0.086,
+            0.1472
+          ],
+          "ta_wer": 0.1176,
+          "ta_wer_ci95": [
+            0.0788,
+            0.1619
+          ],
+          "speaker_sim": 0.9514,
+          "utmos": 3.605,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9207,
+          "english_word_recall_ci95": [
+            0.8688,
+            0.9645
+          ]
+        }
+      }
+    },
+    "extended_10k": {
+      "step": 10000,
+      "overall": {
+        "clips": 320,
+        "romanized_cer": 0.1216,
+        "romanized_cer_ci95": [
+          0.0934,
+          0.1539
+        ],
+        "ta_wer": 0.1274,
+        "ta_wer_ci95": [
+          0.0976,
+          0.1581
+        ],
+        "speaker_sim": 0.9233,
+        "utmos": 3.517,
+        "silent": 0,
+        "no_eos": 0,
+        "english_word_recall": 0.9345,
+        "english_word_recall_ci95": [
+          0.8905,
+          0.9677
+        ]
+      },
+      "by_category": {
+        "brands": {
+          "clips": 16,
+          "romanized_cer": 0.1804,
+          "romanized_cer_ci95": [
+            0.0858,
+            0.2682
+          ],
+          "ta_wer": 0.2143,
+          "ta_wer_ci95": [
+            0.1,
+            0.3182
+          ],
+          "speaker_sim": 0.9237,
+          "utmos": 3.471,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9688,
+          "english_word_recall_ci95": [
+            0.9688,
+            0.9688
+          ]
+        },
+        "en_matrix": {
+          "clips": 48,
+          "romanized_cer": 0.1294,
+          "romanized_cer_ci95": [
+            0.037,
+            0.2647
+          ],
+          "ta_wer": 0.1295,
+          "ta_wer_ci95": [
+            0.0636,
+            0.2019
+          ],
+          "speaker_sim": 0.9347,
+          "utmos": 3.531,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9297,
+          "english_word_recall_ci95": [
+            0.8871,
+            0.9597
+          ]
+        },
+        "english": {
+          "clips": 40,
+          "romanized_cer": 0.0295,
+          "romanized_cer_ci95": [
+            0.0049,
+            0.0706
+          ],
+          "ta_wer": 0.0391,
+          "ta_wer_ci95": [
+            0.0069,
+            0.1
+          ],
+          "speaker_sim": 0.9237,
+          "utmos": 3.579,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9635,
+          "english_word_recall_ci95": [
+            0.9028,
+            0.995
+          ]
+        },
+        "hi+1en": {
+          "clips": 80,
+          "romanized_cer": 0.1186,
+          "romanized_cer_ci95": [
+            0.0863,
+            0.1492
+          ],
+          "ta_wer": 0.1598,
+          "ta_wer_ci95": [
+            0.091,
+            0.2385
+          ],
+          "speaker_sim": 0.9129,
+          "utmos": 3.511,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9205,
+          "english_word_recall_ci95": [
+            0.8,
+            0.9886
+          ]
+        },
+        "hi+multi_en": {
+          "clips": 96,
+          "romanized_cer": 0.1864,
+          "romanized_cer_ci95": [
+            0.1557,
+            0.213
+          ],
+          "ta_wer": 0.1207,
+          "ta_wer_ci95": [
+            0.0722,
+            0.1701
+          ],
+          "speaker_sim": 0.9252,
+          "utmos": 3.529,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9049,
+          "english_word_recall_ci95": [
+            0.8047,
+            0.9792
+          ]
+        },
+        "hindi": {
+          "clips": 40,
+          "romanized_cer": 0.031,
+          "romanized_cer_ci95": [
+            0.0192,
+            0.044
+          ],
+          "ta_wer": 0.1373,
+          "ta_wer_ci95": [
+            0.1064,
+            0.1722
+          ],
+          "speaker_sim": 0.9254,
+          "utmos": 3.436,
+          "silent": 0,
+          "no_eos": 0
+        }
+      },
+      "by_voice_dataset": {
+        "indictts_hi": {
+          "clips": 80,
+          "romanized_cer": 0.1141,
+          "romanized_cer_ci95": [
+            0.0817,
+            0.1502
+          ],
+          "ta_wer": 0.1027,
+          "ta_wer_ci95": [
+            0.0703,
+            0.1377
+          ],
+          "speaker_sim": 0.893,
+          "utmos": 3.959,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9552,
+          "english_word_recall_ci95": [
+            0.8964,
+            0.9934
+          ]
+        },
+        "ivr_hi": {
+          "clips": 160,
+          "romanized_cer": 0.1233,
+          "romanized_cer_ci95": [
+            0.0945,
+            0.1546
+          ],
+          "ta_wer": 0.1432,
+          "ta_wer_ci95": [
+            0.1129,
+            0.1754
+          ],
+          "speaker_sim": 0.9252,
+          "utmos": 3.284,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9224,
+          "english_word_recall_ci95": [
+            0.8804,
+            0.9573
+          ]
+        },
+        "svarah_en": {
+          "clips": 80,
+          "romanized_cer": 0.1257,
+          "romanized_cer_ci95": [
+            0.0967,
+            0.1601
+          ],
+          "ta_wer": 0.1203,
+          "ta_wer_ci95": [
+            0.0874,
+            0.1561
+          ],
+          "speaker_sim": 0.9499,
+          "utmos": 3.54,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9379,
+          "english_word_recall_ci95": [
+            0.886,
+            0.9759
+          ]
+        }
+      }
+    },
+    "extended_15k": {
+      "step": 15000,
+      "overall": {
+        "clips": 320,
+        "romanized_cer": 0.1349,
+        "romanized_cer_ci95": [
+          0.1068,
+          0.1672
+        ],
+        "ta_wer": 0.1497,
+        "ta_wer_ci95": [
+          0.1171,
+          0.183
+        ],
+        "speaker_sim": 0.9251,
+        "utmos": 3.481,
+        "silent": 0,
+        "no_eos": 0,
+        "english_word_recall": 0.8957,
+        "english_word_recall_ci95": [
+          0.8379,
+          0.938
+        ]
+      },
+      "by_category": {
+        "brands": {
+          "clips": 16,
+          "romanized_cer": 0.2005,
+          "romanized_cer_ci95": [
+            0.1176,
+            0.2773
+          ],
+          "ta_wer": 0.2321,
+          "ta_wer_ci95": [
+            0.125,
+            0.3295
+          ],
+          "speaker_sim": 0.9269,
+          "utmos": 3.504,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8594,
+          "english_word_recall_ci95": [
+            0.8125,
+            0.9062
+          ]
+        },
+        "en_matrix": {
+          "clips": 48,
+          "romanized_cer": 0.1699,
+          "romanized_cer_ci95": [
+            0.0822,
+            0.2879
+          ],
+          "ta_wer": 0.1964,
+          "ta_wer_ci95": [
+            0.1113,
+            0.3099
+          ],
+          "speaker_sim": 0.9274,
+          "utmos": 3.452,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8438,
+          "english_word_recall_ci95": [
+            0.739,
+            0.9219
+          ]
+        },
+        "english": {
+          "clips": 40,
+          "romanized_cer": 0.0385,
+          "romanized_cer_ci95": [
+            0.0065,
+            0.0801
+          ],
+          "ta_wer": 0.0443,
+          "ta_wer_ci95": [
+            0.0071,
+            0.1
+          ],
+          "speaker_sim": 0.9262,
+          "utmos": 3.521,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9557,
+          "english_word_recall_ci95": [
+            0.9,
+            0.9929
+          ]
+        },
+        "hi+1en": {
+          "clips": 80,
+          "romanized_cer": 0.1146,
+          "romanized_cer_ci95": [
+            0.0856,
+            0.1426
+          ],
+          "ta_wer": 0.1472,
+          "ta_wer_ci95": [
+            0.071,
+            0.227
+          ],
+          "speaker_sim": 0.9148,
+          "utmos": 3.469,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9659,
+          "english_word_recall_ci95": [
+            0.9271,
+            1.0
+          ]
+        },
+        "hi+multi_en": {
+          "clips": 96,
+          "romanized_cer": 0.2067,
+          "romanized_cer_ci95": [
+            0.1818,
+            0.233
+          ],
+          "ta_wer": 0.1663,
+          "ta_wer_ci95": [
+            0.1215,
+            0.2152
+          ],
+          "speaker_sim": 0.93,
+          "utmos": 3.491,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8587,
+          "english_word_recall_ci95": [
+            0.7446,
+            0.9444
+          ]
+        },
+        "hindi": {
+          "clips": 40,
+          "romanized_cer": 0.0273,
+          "romanized_cer_ci95": [
+            0.0087,
+            0.0442
+          ],
+          "ta_wer": 0.1299,
+          "ta_wer_ci95": [
+            0.0893,
+            0.1675
+          ],
+          "speaker_sim": 0.9291,
+          "utmos": 3.467,
+          "silent": 0,
+          "no_eos": 0
+        }
+      },
+      "by_voice_dataset": {
+        "indictts_hi": {
+          "clips": 80,
+          "romanized_cer": 0.1123,
+          "romanized_cer_ci95": [
+            0.0852,
+            0.1435
+          ],
+          "ta_wer": 0.1149,
+          "ta_wer_ci95": [
+            0.0831,
+            0.1504
+          ],
+          "speaker_sim": 0.8981,
+          "utmos": 4.013,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9345,
+          "english_word_recall_ci95": [
+            0.8818,
+            0.9722
+          ]
+        },
+        "ivr_hi": {
+          "clips": 160,
+          "romanized_cer": 0.1473,
+          "romanized_cer_ci95": [
+            0.1182,
+            0.1795
+          ],
+          "ta_wer": 0.177,
+          "ta_wer_ci95": [
+            0.1436,
+            0.2114
+          ],
+          "speaker_sim": 0.9262,
+          "utmos": 3.189,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.869,
+          "english_word_recall_ci95": [
+            0.8137,
+            0.9148
+          ]
+        },
+        "svarah_en": {
+          "clips": 80,
+          "romanized_cer": 0.1327,
+          "romanized_cer_ci95": [
+            0.0986,
+            0.1743
+          ],
+          "ta_wer": 0.1297,
+          "ta_wer_ci95": [
+            0.0865,
+            0.1806
+          ],
+          "speaker_sim": 0.9498,
+          "utmos": 3.532,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9103,
+          "english_word_recall_ci95": [
+            0.8231,
+            0.975
+          ]
+        }
+      }
+    },
+    "released_english_roman": {
+      "step": 0,
+      "overall": {
+        "clips": 320,
+        "romanized_cer": 0.2072,
+        "romanized_cer_ci95": [
+          0.1748,
+          0.2415
+        ],
+        "ta_wer": 0.4409,
+        "ta_wer_ci95": [
+          0.3706,
+          0.5163
+        ],
+        "speaker_sim": 0.9333,
+        "utmos": 3.8,
+        "silent": 0,
+        "no_eos": 0,
+        "english_word_recall": 0.8353,
+        "english_word_recall_ci95": [
+          0.7663,
+          0.8931
+        ]
+      },
+      "by_category": {
+        "brands": {
+          "clips": 16,
+          "romanized_cer": 0.2759,
+          "romanized_cer_ci95": [
+            0.2623,
+            0.2886
+          ],
+          "ta_wer": 0.6905,
+          "ta_wer_ci95": [
+            0.625,
+            0.7625
+          ],
+          "speaker_sim": 0.9344,
+          "utmos": 3.762,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.5938,
+          "english_word_recall_ci95": [
+            0.5,
+            0.6875
+          ]
+        },
+        "en_matrix": {
+          "clips": 48,
+          "romanized_cer": 0.2526,
+          "romanized_cer_ci95": [
+            0.196,
+            0.3046
+          ],
+          "ta_wer": 0.4688,
+          "ta_wer_ci95": [
+            0.3197,
+            0.6017
+          ],
+          "speaker_sim": 0.9325,
+          "utmos": 3.851,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.75,
+          "english_word_recall_ci95": [
+            0.625,
+            0.879
+          ]
+        },
+        "english": {
+          "clips": 40,
+          "romanized_cer": 0.0255,
+          "romanized_cer_ci95": [
+            0.001,
+            0.0654
+          ],
+          "ta_wer": 0.0339,
+          "ta_wer_ci95": [
+            0.0046,
+            0.0806
+          ],
+          "speaker_sim": 0.9308,
+          "utmos": 3.969,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.9688,
+          "english_word_recall_ci95": [
+            0.9222,
+            0.9975
+          ]
+        },
+        "hi+1en": {
+          "clips": 80,
+          "romanized_cer": 0.2509,
+          "romanized_cer_ci95": [
+            0.2237,
+            0.284
+          ],
+          "ta_wer": 0.6076,
+          "ta_wer_ci95": [
+            0.5079,
+            0.7212
+          ],
+          "speaker_sim": 0.9312,
+          "utmos": 3.748,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.6591,
+          "english_word_recall_ci95": [
+            0.4896,
+            0.8295
+          ]
+        },
+        "hi+multi_en": {
+          "clips": 96,
+          "romanized_cer": 0.2621,
+          "romanized_cer_ci95": [
+            0.2188,
+            0.3063
+          ],
+          "ta_wer": 0.4283,
+          "ta_wer_ci95": [
+            0.3211,
+            0.5301
+          ],
+          "speaker_sim": 0.9359,
+          "utmos": 3.803,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8397,
+          "english_word_recall_ci95": [
+            0.7722,
+            0.9137
+          ]
+        },
+        "hindi": {
+          "clips": 40,
+          "romanized_cer": 0.1083,
+          "romanized_cer_ci95": [
+            0.0737,
+            0.1399
+          ],
+          "ta_wer": 0.4608,
+          "ta_wer_ci95": [
+            0.3537,
+            0.55
+          ],
+          "speaker_sim": 0.9343,
+          "utmos": 3.679,
+          "silent": 0,
+          "no_eos": 0
+        }
+      },
+      "by_voice_dataset": {
+        "indictts_hi": {
+          "clips": 80,
+          "romanized_cer": 0.1963,
+          "romanized_cer_ci95": [
+            0.1618,
+            0.2323
+          ],
+          "ta_wer": 0.4027,
+          "ta_wer_ci95": [
+            0.3355,
+            0.4735
+          ],
+          "speaker_sim": 0.8898,
+          "utmos": 4.165,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8966,
+          "english_word_recall_ci95": [
+            0.8347,
+            0.9451
+          ]
+        },
+        "ivr_hi": {
+          "clips": 160,
+          "romanized_cer": 0.2129,
+          "romanized_cer_ci95": [
+            0.1772,
+            0.2504
+          ],
+          "ta_wer": 0.4662,
+          "ta_wer_ci95": [
+            0.3895,
+            0.5514
+          ],
+          "speaker_sim": 0.9396,
+          "utmos": 3.634,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8103,
+          "english_word_recall_ci95": [
+            0.7234,
+            0.883
+          ]
+        },
+        "svarah_en": {
+          "clips": 80,
+          "romanized_cer": 0.2069,
+          "romanized_cer_ci95": [
+            0.1727,
+            0.244
+          ],
+          "ta_wer": 0.4284,
+          "ta_wer_ci95": [
+            0.3465,
+            0.5159
+          ],
+          "speaker_sim": 0.9642,
+          "utmos": 3.767,
+          "silent": 0,
+          "no_eos": 0,
+          "english_word_recall": 0.8241,
+          "english_word_recall_ci95": [
+            0.7393,
+            0.8963
+          ]
+        }
+      }
+    }
+  },
+  "asr_floor_real_speech": {
+    "utts": 120,
+    "romanized_cer": 0.0711,
+    "ta_wer": 0.1895
+  },
+  "paired": {
+    "ta_wer: extended_5k - baseline_5k": [
+      -0.0518,
+      -0.0087
+    ],
+    "romanized_cer: extended_5k - baseline_5k": [
+      -0.0279,
+      -0.0025
+    ]
+  }
+}
