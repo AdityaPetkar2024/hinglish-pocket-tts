@@ -201,7 +201,7 @@ def dataset_fn():
 
 @app.function(image=image, volumes={"/vol": vol}, secrets=[hf], gpu=["L40S", "A100-80GB", "H100", "A10G"],
               cpu=4, memory=32768, timeout=3600)
-def speak_fn(lines: list, voice: bytes, voice_name: str, cfg: float):
+def speak_fn(lines: list, voice: bytes, voice_name: str, cfg: float, seed: int = 0, temp: float = 0.3):
     """Runs infer.py inside the pocket-tts venv (the container's own python has no torch)."""
     import glob, json, os
     vol.reload()
@@ -214,7 +214,7 @@ def speak_fn(lines: list, voice: bytes, voice_name: str, cfg: float):
     open("/tmp/lines.txt", "w", encoding="utf-8").write("\n".join(lines) + "\n")
     os.makedirs("/tmp/demo", exist_ok=True)
     sh(f"PYTHONPATH={REPO} {PY} /root/infer.py --file /tmp/lines.txt --voice {vpath} --out /tmp/demo/clip.wav "
-       f"--cfg {cfg} --repo {MODEL_REPO}")
+       f"--cfg {cfg} --seed {seed} --temp {temp} --repo {MODEL_REPO}")
     files = sorted(glob.glob("/tmp/demo/clip*.wav"))
     return [open(f, "rb").read() for f in files]
 
@@ -240,6 +240,39 @@ def cards_fn():
        f"repo_type='dataset'); print('both cards updated')\"")
 
 
+@app.function(image=image, volumes={"/vol": vol}, timeout=600)
+def voices_fn(n: int):
+    """Candidate voice prompts from the validation split: speakers held out from training
+    (IndicVoices-R, Svarah) plus the two studio IndicTTS speakers. Code-mixed utterances first."""
+    import collections, json, re
+    vol.reload()
+    rows = [json.loads(l) for l in open("/vol/data/valid.jsonl", encoding="utf-8")]
+    by_spk = collections.defaultdict(list)
+    for r in rows:
+        if 6 <= r["duration"] <= 11:
+            by_spk[(r["dataset"], r["speaker"])].append(r)
+    picks = []
+    for (ds, spk), rs in sorted(by_spk.items()):
+        rs.sort(key=lambda r: (not re.search("[A-Za-z]", r["transcript"]), abs(r["duration"] - 8)))
+        picks.append(rs[0])
+    order = {"indictts_hi": 0, "ivr_hi": 1, "svarah_en": 2}
+    picks.sort(key=lambda r: order.get(r["dataset"], 3))
+    picks = picks[:2] + [r for r in picks[2:] if r["dataset"] == "ivr_hi"][:n] + \
+            [r for r in picks if r["dataset"] == "svarah_en"][:3]
+    return [(f'{r["dataset"]}_{r["speaker"][-6:]}.flac', open(r["path"], "rb").read(), r["transcript"])
+            for r in picks]
+
+
+@app.local_entrypoint()
+def voices(n: int = 12):
+    """Download candidate voice prompts into ./voices to listen and pick one for ::speak."""
+    import os
+    os.makedirs("voices", exist_ok=True)
+    for name, data, text in voices_fn.remote(n):
+        open(os.path.join("voices", name), "wb").write(data)
+        print(f"voices/{name}  {text}")
+
+
 @app.local_entrypoint()
 def cards():
     """Re-upload the two README cards only (1 min, CPU)."""
@@ -252,17 +285,18 @@ def dataset():
 
 
 @app.local_entrypoint()
-def speak(file: str = "demo.txt", voice: str = "", cfg: float = 2.0):
+def speak(file: str = "demo.txt", voice: str = "", cfg: float = 2.0, seed: int = 0, temp: float = 0.3,
+          out: str = "demo"):
     """One wav per non-empty line of `file` (UTF-8), in the voice of `voice` (a local 4-10 s recording;
     empty = a held-out IndicTTS speaker). Saved to ./demo/."""
     import os
     lines = [l.strip() for l in open(file, encoding="utf-8").read().splitlines() if l.strip()]
     vb = open(voice, "rb").read() if voice else b""
-    wavs = speak_fn.remote(lines, vb, os.path.basename(voice) or "voice.wav", cfg)
-    os.makedirs("demo", exist_ok=True)
+    wavs = speak_fn.remote(lines, vb, os.path.basename(voice) or "voice.wav", cfg, seed, temp)
+    os.makedirs(out, exist_ok=True)
     for i, (line, data) in enumerate(zip(lines, wavs), 1):
-        open(f"demo/{i:02d}.wav", "wb").write(data)
-        print(f"demo/{i:02d}.wav  {line}")
+        open(f"{out}/{i:02d}.wav", "wb").write(data)
+        print(f"{out}/{i:02d}.wav  {line}")
 
 
 @app.local_entrypoint()

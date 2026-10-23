@@ -95,6 +95,7 @@ def synthesize(text: str, voice: str, cfg: float = 2.0, source: str = DEFAULT_RE
 
 
 def main():
+    global TEMP
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--text", help="text to speak (or use --file)")
     ap.add_argument("--file", help="UTF-8 text file, one utterance per line -> out_001.wav, out_002.wav, ...")
@@ -102,8 +103,10 @@ def main():
     ap.add_argument("--out", default="out.wav")
     ap.add_argument("--cfg", type=float, default=2.0, help="1 = stock pocket_tts sampler, 2 = guided (default)")
     ap.add_argument("--repo", default=DEFAULT_REPO, help="HF model repo or a local exported folder")
-    ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--seed", type=int, default=0, help="different seeds give different takes")
+    ap.add_argument("--temp", type=float, default=0.3, help="0.3 = evaluated; lower is steadier, higher livelier")
     a = ap.parse_args()
+    TEMP = a.temp
     if not (a.text or a.file):
         ap.error("give --text or --file")
     import soundfile as sf
