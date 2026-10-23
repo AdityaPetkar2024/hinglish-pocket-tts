@@ -41,7 +41,7 @@ preprocessing.
 
 | Dataset | Link | What it is | License |
 |---|---|---|---|
-| IndicTTS Hindi | [SPRINGLab/IndicTTS-Hindi](https://huggingface.co/datasets/SPRINGLab/IndicTTS-Hindi) (copy of the [IIT Madras IndicTTS database](https://www.iitm.ac.in/donlab/indictts/)) | studio read speech, 2 speakers | IndicTTS database terms (IIT Madras) |
+| IndicTTS Hindi | [SPRINGLab/IndicTTS-Hindi](https://huggingface.co/datasets/SPRINGLab/IndicTTS-Hindi) (Hugging Face copy of the IndicTTS database recorded by IIT Madras) | studio read speech, 2 speakers | IndicTTS database terms (IIT Madras) |
 | IndicVoices-R | [ai4bharat/indicvoices_r](https://huggingface.co/datasets/ai4bharat/indicvoices_r), Hindi subset | read and conversational speech, many speakers, human transcripts (verbatim and normalized) | CC BY 4.0 |
 | Svarah | [ai4bharat/Svarah](https://huggingface.co/datasets/ai4bharat/Svarah) | English from 117 Indian speakers across 19 states, read and conversational | CC BY 4.0 |
 
